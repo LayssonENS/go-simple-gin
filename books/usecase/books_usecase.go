@@ -23,7 +23,7 @@ func (a *booksUseCase) GetByID(id int64) (domain.Books, error) {
 	return books, nil
 }
 
-func (a *booksUseCase) CreateBooks(books domain.Books) error {
+func (a *booksUseCase) CreateBooks(books domain.BooksRequest) error {
 	err := a.booksRepository.CreateBooks(books)
 	if err != nil {
 		return err
